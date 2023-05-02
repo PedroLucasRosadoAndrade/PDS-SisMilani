@@ -67,6 +67,9 @@
     <Compile Include="CadastrarProdutora.xaml.cs">
       <DependentUpon>CadastrarProdutora.xaml</DependentUpon>
     </Compile>
+    <Compile Include="compraIngresso.xaml.cs">
+      <DependentUpon>compraIngresso.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CadastrarProdutora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="compraIngresso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
