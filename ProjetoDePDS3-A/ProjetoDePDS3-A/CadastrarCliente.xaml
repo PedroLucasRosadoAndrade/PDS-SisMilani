@@ -5,48 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoDePDS3_A"
         mc:Ignorable="d"
-        Title="CadastroCliente" Height="589" Width="973" MinHeight="300" MinWidth="500" 
+         Title="CadastroCliente" Height="776" Width="973" MinHeight="300" MinWidth="500" 
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Minimized" >
-    <Grid x:Name="cbxEstado" HorizontalAlignment="Left" Margin="-10,0,0,0">
+    <Grid Background="#FFB2B9B0" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="56*"/>
             <ColumnDefinition Width="83*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="458*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="266*"/>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="57*"/>
+            <RowDefinition Height="66.271"/>
         </Grid.RowDefinitions>
 
-        <TextBlock  FontSize="24" Margin="19,10,0,264" Width="NaN" Grid.RowSpan="2" Height="NaN" FontWeight="Bold" ><Run Text="Dados Pessoais"/></TextBlock>
+        <TextBlock  FontSize="24" Margin="10,2,571,34" Width="NaN" Height="NaN" FontWeight="Bold" Grid.ColumnSpan="2" ><Run Text="Dados Pessoais"/></TextBlock>
 
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="10,10,58,4" Orientation="Vertical" Height="NaN" Width="NaN">
-
-            <Label FontSize="24" Content="Nome Completo" Width="647" Height="40" Foreground="Black" />
-            <TextBox x:Name="txtNome" FontSize="19" Text="" Width="310" Height="22" RenderTransformOrigin="0.5,0.5">
-                <TextBox.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-0.357"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </TextBox.RenderTransform>
-            </TextBox>
-
-            <Label FontSize="24" Content="Telefone" Width="647" Height="40" Foreground="Black" />
-            <TextBox x:Name="txtTelefone" FontSize="19" Text="" Width="317" Height="20"/>
+        <StackPanel Grid.Column="0" Margin="11,56,580,35" Orientation="Vertical" Height="NaN" Width="NaN" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Label FontSize="24" Content="Nome Completo" Width="647" Height="44" Foreground="Black" FontWeight="Bold" />
         </StackPanel>
 
-        <TextBlock  FontSize="24" Margin="22,168,2,253" Width="NaN" Height="NaN" Grid.Row="1" FontWeight="Bold" ><Run Text="Endereço"/></TextBlock>
+        <TextBlock  FontSize="24" Margin="24,189,0,359" Width="NaN" Height="NaN" Grid.Row="1" FontWeight="Bold" ><Run Text="Endereço"/></TextBlock>
 
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Height="NaN" Margin="0,4,0,5" Width="544" Grid.Column="1">
-            <Button x:Name="btCancelar" Content="CANCELAR" Width="179"  Margin="5 5 10 5" Background="White"  FontWeight="Bold" FontSize="24"/>
-            <Button x:Name="btLimpar" Content="LIMPAR" Width="165" Margin="5 5 10 5" Background="White" FontWeight="Bold"  FontSize="24" Height="37"/>
-            <Button x:Name="btSalvar" Content="SALVAR" Width="165" Background="White" FontWeight="Bold"  FontSize="24" RenderTransformOrigin="0.5,0.5" Height="41">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Height="NaN" Margin="324,610,0,15" Width="608" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Button x:Name="btCancelar" Content="CANCELAR" Width="195" Background="White"  Foreground="Black" FontWeight="Bold" FontSize="24"  />
+            <Button x:Name="btLimpar" Content="LIMPAR" Width="195" Background="White"  Foreground="Black" FontWeight="Bold"  FontSize="24"/>
+            <Button x:Name="btSalvar" Content="SALVAR" Width="202" Background="White" Foreground="Black" FontWeight="Bold"  FontSize="24" >
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -57,24 +43,39 @@
                 </Button.RenderTransform>
             </Button>
         </StackPanel>
-        <Label FontSize="24" Content="CPF" Foreground="Black" Margin="10,10,-76,408" Grid.Row="1" Grid.Column="1" />
-        <TextBox x:Name="txtCpf_Copy" FontSize="19" Text="" Margin="10,50,99,380" Grid.Row="1" Grid.Column="1" Height="NaN" Width="NaN"/>
-        <Label FontSize="24" Content="E-mail" Foreground="Black" Margin="10,78,-76,340" Grid.Row="1" Grid.Column="1" />
-        <TextBox x:Name="txtEmail_Copy" FontSize="19" Text="" Margin="15,123,99,311" Grid.Row="1" Grid.Column="1" Height="NaN" Width="NaN"/>
-        <Label FontSize="24" Content="CEP" Foreground="Black" Margin="20,210,24,208" Grid.Row="1" Width="NaN" />
-        <ComboBox x:Name="CbxCep_Copy" FontSize="19" Text="" Margin="22,250,26,186" Grid.Row="1" Height="NaN" Width="NaN"/>
-        <ComboBox x:Name="CbxEstado_Copy" FontSize="19" Text=""  Margin="396,248,327,186" Grid.Row="1" Height="NaN" Width="NaN" Grid.ColumnSpan="2"/>
-        <Label FontSize="24" Content="UF" Foreground="Black" Margin="394,201,345,217" Grid.Row="1" Width="NaN" Grid.ColumnSpan="2" />
-        <Label FontSize="24" Content="Município" Foreground="Black" Margin="291,202,14,216" Grid.Column="1" Grid.Row="1" Width="NaN" />
-        <ComboBox x:Name="CbxMunicipio_Copy" FontSize="19" Text="" Margin="291,247,32,181" Grid.Column="1" Grid.Row="1" Height="NaN" Width="NaN"/>
-        <Label FontSize="24" Content="Endereço" Foreground="Black" Margin="26,284,25,134" Grid.Row="1" Width="NaN" />
-        <TextBox x:Name="CbxEndereço_Copy" FontSize="19" Text=""  Margin="26,329,10,105" Grid.Row="1" Height="NaN" Width="NaN"/>
-        <Label FontSize="24" Content="Número" Foreground="Black" Margin="10,277,-76,141" Grid.Row="1" Grid.Column="1" />
-        <TextBox x:Name="TxtNumero_Copy" FontSize="19" Text="" Margin="10,329,204,105" Grid.Row="1" Grid.Column="1" Width="NaN" Height="NaN"/>
-        <Label FontSize="24" Content="Complemento" Foreground="Black" Margin="18,364,32,54" Grid.Row="1" Grid.Column="1" Width="NaN" />
-        <TextBox x:Name="TxtComplemento_Copy" FontSize="19" Text="" Margin="26,409,188,25" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1"/>
-        <Label FontSize="24" Content="Bairro" Foreground="Black" Margin="22,361,116,50" Grid.Row="1" Width="NaN" Height="NaN" />
-        <TextBox x:Name="TxtBairro_Copy" FontSize="19" Text="" Margin="26,408,10,26" Grid.Row="1" Height="NaN" Width="NaN"/>
+        <Label FontSize="24" Content="CPF" Foreground="Black" Margin="30,56,8,554" Grid.Column="1" Grid.RowSpan="2" FontWeight="Bold" />
+        <TextBox x:Name="txtCpf" FontSize="19" Text="" Margin="30,32,79,545" Grid.Row="1" Grid.Column="1" Height="NaN" Width="NaN"/>
+
+        <Label FontSize="24" Content="E-mail" Foreground="Black" Margin="28,76,10,469" Grid.Row="1" Grid.Column="1" FontWeight="Bold" />
+        <TextBox x:Name="txtEmail" FontSize="19" Text="" Margin="30,120,83,455" Grid.Row="1" Grid.Column="1" Height="NaN" Width="NaN"/>
+
+        <Label FontSize="24" Content="CEP" Foreground="Black" Margin="34,244,10,38" Grid.Row="1" Width="NaN" FontWeight="Bold" />
+        <ComboBox x:Name="CbxCep" FontSize="19" Text="" Margin="39,283,580,295" Grid.Row="1" Height="NaN" Width="NaN" Grid.ColumnSpan="2" />
+
+        <ComboBox x:Name="CbxUf" FontSize="19" Text=""  Margin="15,285,304,293" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1"/>
+        <Label FontSize="24" Content="UF" Foreground="Black" Margin="15,244,290,301" Grid.Row="1" Width="NaN" Grid.Column="1" FontWeight="Bold" />
+
+        <Label FontSize="24" Content="Município" Foreground="Black" Margin="305,244,0,300" Grid.Column="1" Grid.Row="1" Width="NaN" FontWeight="Bold" />
+        <ComboBox x:Name="CbxMunicipio" FontSize="19" Text="" Margin="305,283,19,294" Grid.Column="1" Grid.Row="1" Height="NaN" Width="NaN"/>
+
+        <Label FontSize="24" Content="Endereço" Foreground="Black" Margin="28,354,24,64" Grid.Row="1" Width="NaN" FontWeight="Bold" />
+        <TextBox x:Name="TxtEndereço" FontSize="19" Text=""  Margin="37,395,580,175" Grid.Row="1" Height="NaN" Width="NaN" Grid.ColumnSpan="2"/>
+
+        <Label FontSize="24" Content="Número" Foreground="Black" Margin="66,354,-132,135" Grid.Row="1" Grid.Column="1" FontWeight="Bold" />
+        <TextBox x:Name="TxtNumero" FontSize="19" Text="" Margin="66,395,147,175" Grid.Row="1" Grid.Column="1" Width="NaN" Height="NaN"/>
+
+        <Label FontSize="24" Content="Complemento" Foreground="Black" Margin="66,476,-17,38" Grid.Row="1" Grid.Column="1" Width="NaN" FontWeight="Bold" />
+        <TextBox x:Name="TxtComplemento" FontSize="19" Text="" Margin="66,516,140,50" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1"/>
+
+        <Label FontSize="24" Content="Bairro" Foreground="Black" Margin="28,476,110,0" Grid.Row="1" Width="NaN" Height="NaN" Grid.RowSpan="3" FontWeight="Bold" />
+        <TextBox x:Name="TxtBairro" FontSize="19" Text="" Margin="36,516,0,50" Grid.Row="1" Height="NaN" Width="NaN"/>
+        <TextBox x:Name="txtTelefone" FontSize="19" Text="" Margin="14,115,10,460" Grid.Row="1" Height="NaN" Width="NaN"/>
+        <TextBox x:Name="txtNome" FontSize="19" Text="" Margin="18,29,6,545" Grid.Row="1" Height="NaN" Width="NaN"/>
+        <Label FontSize="24" Content="Telefone" Foreground="Black" Margin="14,77,10,469" Grid.Row="1" FontWeight="Bold" />
+
+
+
+
 
 
 
