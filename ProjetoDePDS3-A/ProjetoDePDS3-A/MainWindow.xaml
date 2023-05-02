@@ -1,0 +1,73 @@
+﻿<Window x:Class="ProjetoDePDS3_A.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoDePDS3_A"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8.*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                   FontSize="16" FontWeight="Bold" Padding="10" Text="Tela de Cadastro"/>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
+
+            <Label Content="Nome" FontSize="16"> </Label>
+            <TextBox FontSize="16" Text=""/>
+
+            <Label Content="Cpf" FontSize="16" ></Label>
+            <TextBox FontSize="16" Text=""/>
+            
+            <Label Content="Email" FontSize="16"></Label>
+            <TextBox FontSize="16" Text=""/>
+
+            <Label Content="Telefone" FontSize="16"></Label>
+            <TextBox FontSize="16" Text=""/>
+
+            <Label Content="Sexo" FontSize="16"></Label>
+            <TextBox FontSize="16" Text=""/>
+
+            <Label Content="Data de Nascimento" FontSize="16"></Label>
+            <DatePicker />
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="40">
+            <Label Content="Dados de Endereço" FontSize="16" HorizontalAlignment="Center"  FontWeight="Bold"/>
+
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                <Label Content="CEP" FontSize="16" />
+                <Button Content="Buscar nos Correios"/>
+                <TextBox FontSize="16" Text=""/>
+                
+                
+            </StackPanel>
+            
+            <TextBox FontSize="16" Text=""/>
+
+        </StackPanel>
+        
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Cancelar" Width="60" Margin="5 5 5 5"/>
+            <Button Content="Limpar" Width="60" Margin="5 5 5 5 "/>
+            <Button Content="Salvar" Width="60" Margin="5 5 5 5"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
