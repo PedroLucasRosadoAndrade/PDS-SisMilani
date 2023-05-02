@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfAppCadastrarFilmes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCadastrarFilmes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid Height="NaN" Margin="0,0,0,-16" Width="NaN">
+        <ComboBox HorizontalAlignment="Left" Margin="540,276,0,0" VerticalAlignment="Top" Width="227" RenderTransformOrigin="0.5,0.5" Height="35">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.2"/>
+                    <RotateTransform Angle="-0.432"/>
+                    <TranslateTransform X="0.038"/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <Label Content="Filmes" HorizontalAlignment="Left" Margin="351,27,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="43,71,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Descrição" HorizontalAlignment="Left" Margin="43,149,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Valor" HorizontalAlignment="Left" Margin="43,237,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Codigo" HorizontalAlignment="Left" Margin="43,320,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Data" HorizontalAlignment="Left" Margin="540,71,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Fornecedor" HorizontalAlignment="Left" Margin="540,159,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Unidade" HorizontalAlignment="Left" Margin="540,237,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <DatePicker HorizontalAlignment="Left" Margin="540,105,0,0" VerticalAlignment="Top" Width="221" Height="23"/>
+        <Button Content="Salvar" HorizontalAlignment="Left" Margin="82,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="351,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button Content="ADD" HorizontalAlignment="Left" Margin="569,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Outras Opeções" HorizontalAlignment="Left" Margin="564,363,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox HorizontalAlignment="Left" Margin="540,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+
+    </Grid>
+</Window>
