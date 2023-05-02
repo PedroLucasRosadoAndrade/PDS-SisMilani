@@ -65,7 +65,7 @@
         <TextBox x:Name="TxtNumero" FontSize="19" Text="" Margin="66,395,147,175" Grid.Row="1" Grid.Column="1" Width="NaN" Height="NaN"/>
 
         <Label FontSize="24" Content="Complemento" Foreground="Black" Margin="66,476,-17,38" Grid.Row="1" Grid.Column="1" Width="NaN" FontWeight="Bold" />
-        <TextBox x:Name="TxtComplemento" FontSize="19" Text="" Margin="66,516,140,50" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1" TextChanged="TxtComplemento_TextChanged"/>
+        <TextBox x:Name="TxtComplemento" FontSize="19" Text="" Margin="66,516,140,50" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1"/>
 
         <Label FontSize="24" Content="Bairro" Foreground="Black" Margin="28,476,110,0" Grid.Row="1" Width="NaN" Height="NaN" Grid.RowSpan="3" FontWeight="Bold" />
         <TextBox x:Name="TxtBairro" FontSize="19" Text="" Margin="36,516,0,50" Grid.Row="1" Height="NaN" Width="NaN"/>
