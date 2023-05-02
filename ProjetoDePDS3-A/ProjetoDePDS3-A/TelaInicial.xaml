@@ -1,0 +1,35 @@
+﻿<Window x:Class="ProjetoDePDS3_A.TelaInicial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoDePDS3_A"
+        mc:Ignorable="d"
+        Title="TelaInicial" Height="457" Width="424">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="458*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                   FontSize="16" FontWeight="Bold" Padding="5" Text="Oque deseja Cadastrar?"/>
+
+
+        <StackPanel Grid.Row="1" Margin="80,80,80,18">
+            <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="30" Width="194">
+
+                <Button Content="Cadastrar Cliente" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click"/>
+                <Button Content="Cadastrar Filme" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_1"/>
+                <Button Content="Cadastrae Fornecedor" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_2"/>
+                <Button Content="Cadastrar Produtora" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_3"/>
+                <Button Content="Cadastrar Funcionario" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_4"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

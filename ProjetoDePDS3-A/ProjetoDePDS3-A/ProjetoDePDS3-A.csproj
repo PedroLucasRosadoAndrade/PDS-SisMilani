@@ -55,9 +55,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CadastrarCliente.xaml.cs">
+      <DependentUpon>CadastrarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarFilme.xaml.cs">
+      <DependentUpon>CadastrarFilme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarFornecedor.xaml.cs">
+      <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarProdutora.xaml.cs">
+      <DependentUpon>CadastrarProdutora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TelaInicial.xaml.cs">
+      <DependentUpon>TelaInicial.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowCadastrarFuncionario.xaml.cs">
       <DependentUpon>WindowCadastrarFuncionario.xaml</DependentUpon>
     </Compile>
+    <Page Include="CadastrarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CadastrarFilme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CadastrarFornecedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CadastrarProdutora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="TelaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowCadastrarFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
