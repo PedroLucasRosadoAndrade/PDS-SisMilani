@@ -8,4 +8,4 @@
 
 *Marco - Cadastrar Produtora
 
-*Pedro Lucas - Cadastar Funcionario
+*Pedro Lucas - Cadastar Funcionário
