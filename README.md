@@ -1,4 +1,5 @@
-# ProjetoPDSTelas
+# PROJETO DO SISTEMA Sis milani 1.0 
+
 *Ana Clara - Cadastrar Fornecedor
 
 *Bárbara - Cadastrar Cliente
@@ -7,4 +8,4 @@
 
 *Marco - Cadastrar Produtora
 
-*Pedro Lucas - Cadastar Funcionario
+*Pedro Lucas - Cadastar Funcionário
