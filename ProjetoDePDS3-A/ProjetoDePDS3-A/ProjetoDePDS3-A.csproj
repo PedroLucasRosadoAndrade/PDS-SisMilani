@@ -148,6 +148,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Compontes\" />
     <Folder Include="DataBase\" />
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
