@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:ProjetoDePDS3_A"
         mc:Ignorable="d"
         Title="WindowCadastrarFuncionario" Height="687" Width="1532">
-    <Grid>
-
-        
+    <Grid Background="#FFF32A2A" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="519*"/>
+            <ColumnDefinition Width="1013*"/>
+        </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -16,8 +18,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                   FontSize="16" FontWeight="Bold" Padding="5" Text="Cadastro de Funcionário"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"
+                   FontSize="16" FontWeight="Bold" Padding="5" Text="Cadastro de Funcionário" Margin="151,0,0,0" Foreground="#FF160606"/>
 
 
         <!--<StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
@@ -46,8 +48,8 @@
         </StackPanel>-->
 
 
-        <StackPanel Grid.Column="1" Grid.Row="1" Margin="0">
-            
+        <StackPanel Margin="0,61,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#FF343333">
+
             <!--<StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                 <Label Content="CEP" FontSize="16" />
                 <Button Content="Buscar nos Correios"/>
@@ -56,85 +58,82 @@
             </StackPanel>-->
 
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="2">
-                <Label Content="Cadastro" FontSize="16" FontWeight="Bold"></Label>
-                <TextBox FontSize="16" Text="" Width="100"/>
-
-                <Label Content="Nome" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Nome" FontSize="16" FontWeight="Bold" Foreground="#FFFAF7F7"></Label>
                 <TextBox FontSize="16" Text="" Width="205"/>
 
-                <Label Content="Sobre Nome" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Sobre Nome" FontSize="16" FontWeight="Bold" Foreground="#FFFAF5F5"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
-                <Label Content="Apelido" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Apelido" FontSize="16" FontWeight="Bold" Foreground="#FFFAF4F4"></Label>
                 <TextBox FontSize="16" Text="" Width="100"/>
 
-                <Label Content="Empresa" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Empresa" FontSize="16" FontWeight="Bold" Foreground="#FFF7F2F2" ></Label>
                 <ComboBox FontSize="16" Width="200"/>
-                
+
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="30">
-                <Label Content="Aniversário" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Aniversário" FontSize="16" FontWeight="Bold" Foreground="#FFF6F2F2"></Label>
                 <DatePicker Width="150" FontSize="16"/>
 
-                <Label Content="Sexo" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Sexo" FontSize="16" FontWeight="Bold" Foreground="#FFF1F0F0"></Label>
                 <TextBox FontSize="16" Text="" Width="100"/>
 
                 <Label Content="RG" FontSize="16" FontWeight="Bold"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
-                <Label Content="CPF" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="CPF" FontSize="16" FontWeight="Bold" Foreground="#FFF9F5F5"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
-                <Label Content="Celular" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Celular" FontSize="16" FontWeight="Bold" Foreground="#FFF9F4F4"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
-                
+
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="20">
-                <Label Content="CEP" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="CEP" FontSize="16" FontWeight="Bold" Foreground="#FFFDF7F7"></Label>
                 <ComboBox FontSize="16" Width="200"/>
 
-                <Label Content="Logadouro" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Logadouro" FontSize="16" FontWeight="Bold" Foreground="#FFFCF7F7"></Label>
                 <TextBox FontSize="16" Text="" Width="250"/>
 
-                <Label Content="Número" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Número" FontSize="16" FontWeight="Bold" Foreground="#FFF9F0F0"></Label>
                 <TextBox FontSize="16" Text="" Width="100"/>
 
-                <Label Content="Fone Residencial" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Fone Residencial" FontSize="16" FontWeight="Bold" Foreground="#FFFDF8F8"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="20">
-                <Label Content="Complemento" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Complemento" FontSize="16" FontWeight="Bold" Foreground="#FFF9F5F5"></Label>
                 <TextBox FontSize="16" Text="" Width="300"/>
 
-                <Label Content="Bairro" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Bairro" FontSize="16" FontWeight="Bold" Foreground="#FFF4F1F1"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
-                <Label Content="Cidade" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Cidade" FontSize="16" FontWeight="Bold" Foreground="#FFF7EFEF"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>
 
-                <Label Content="Estado" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Estado" FontSize="16" FontWeight="Bold" Foreground="#FFF9F4F4"></Label>
                 <TextBox FontSize="16" Text="" Width="100"/>
 
-                <Label Content="E-mail" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="E-mail" FontSize="16" FontWeight="Bold" Foreground="#FFFFF8F8"></Label>
                 <TextBox FontSize="16" Text="" Width="300"/>
 
-               
+
             </StackPanel>
 
 
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="20">
-                <Label Content="Admissão" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Admissão" FontSize="16" FontWeight="Bold" Foreground="#FFF7F6F6"></Label>
                 <DatePicker FontSize="16" Width="150"/>
 
-                <Label Content="Demissão" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Demissão" FontSize="16" FontWeight="Bold" Foreground="Snow"></Label>
                 <DatePicker FontSize="16" Width="150"/>
 
-                <Label Content="Grupo da Folha de Pagamento" FontSize="16" FontWeight="Bold"></Label>
+                <Label Content="Grupo da Folha de Pagamento" FontSize="16" FontWeight="Bold" Foreground="#FFF7F2F2"></Label>
                 <ComboBox FontSize="16" Text="" Width="300"/>
 
 
@@ -144,28 +143,28 @@
 
                 <StackPanel Grid.Column="0" Grid.Row="1" Margin="50" Orientation="Vertical">
 
-                    <Label Content="Admissão" FontSize="16" FontWeight="Bold"></Label>
-                    <RadioButton Content="Administrativo" FontSize="16" FontWeight="Bold" Margin="10"/>
-                    <RadioButton Content="Usa auxiliar" FontSize="16" FontWeight="Bold" Margin="10"/>
-                    <RadioButton Content="Atua como profissional" FontSize="16" FontWeight="Bold" Margin="10"/>
+                    <Label Content="Admissão" FontSize="16" FontWeight="Bold" Foreground="#FFF7F7FD"></Label>
+                    <RadioButton Content="Administrativo" FontSize="16" FontWeight="Bold" Margin="10" Foreground="#FFF4F4F9"/>
+                    <RadioButton Content="Usa auxiliar" FontSize="16" FontWeight="Bold" Margin="10" Foreground="#FFF7F7FA"/>
+                    <RadioButton Content="Atua como profissional" FontSize="16" FontWeight="Bold" Margin="10" Foreground="#FFF4F4FA"/>
 
-                    
+
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Grid.Row="1" Margin="40" >
 
                     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="20">
-                    
-                    
-                        <Label Content="Cargo" FontSize="16" FontWeight="Bold"></Label>
+
+
+                        <Label Content="Cargo" FontSize="16" FontWeight="Bold" Foreground="#FFFCF3F3"></Label>
                         <ComboBox FontSize="16" Width="300"/>
 
-                        <Label Content="Comissão como auxiliar" FontSize="16" FontWeight="Bold"></Label>
+                        <Label Content="Comissão como auxiliar" FontSize="16" FontWeight="Bold" Foreground="#FFF6F6F6"/>
                         <TextBox FontSize="16" Text="" Width="300"/>
 
                     </StackPanel>
-                    
-                    <Label Content=" Porcentagem da comissão do auxiliar" FontSize="16" FontWeight="Bold"></Label>
+
+                    <Label Content=" Porcentagem da comissão do auxiliar" FontSize="16" FontWeight="Bold" Foreground="#FFF7F2F2"></Label>
                     <TextBox FontSize="16" Text="" Width="300"/>
 
                 </StackPanel>
@@ -175,14 +174,14 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Cancelar" Width="70" Margin="5 9 20 8 " FontWeight="Bold"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="709,549,0,0" Grid.RowSpan="2">
+            <Button Content="Cancelar" Width="70" Margin="5 9 20 8 " FontWeight="Bold" Background="#FFC94F34"/>
             <Button Content="Limpar" Width="70" Margin="20 9 20 8 " FontWeight="Bold"/>
-            <Button Content="Salvar" Width="70" Margin="20 9 9 8 " FontWeight="Bold"/>
+            <Button Content="Salvar" Width="70" Margin="20 9 9 8 " FontWeight="Bold" Background="#FF34FA05"/>
         </StackPanel>
 
 
     </Grid>
 
-    
+
 </Window>
