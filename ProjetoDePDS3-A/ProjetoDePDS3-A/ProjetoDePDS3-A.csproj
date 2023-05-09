@@ -64,11 +64,20 @@
     <Compile Include="CadastrarFornecedor.xaml.cs">
       <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarPagamentos.xaml.cs">
+      <DependentUpon>CadastrarPagamentos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarProdutora.xaml.cs">
       <DependentUpon>CadastrarProdutora.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CadastroFornecedores2.xaml.cs">
+      <DependentUpon>CadastroFornecedores2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="compraIngresso.xaml.cs">
       <DependentUpon>compraIngresso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComprarIngresso.xaml.cs">
+      <DependentUpon>ComprarIngresso.xaml</DependentUpon>
     </Compile>
     <Compile Include="TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
@@ -88,11 +97,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CadastrarPagamentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CadastrarProdutora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CadastroFornecedores2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="compraIngresso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComprarIngresso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
