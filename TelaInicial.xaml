@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjetoDePDS3_A"
         mc:Ignorable="d"
         Title="TelaInicial" Height="457" Width="424">
-    <Grid>
+    <Grid Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"/>
             <RowDefinition Height="458*"/>
@@ -18,14 +18,14 @@
                    FontSize="16" FontWeight="Bold" Padding="5" Text="Oque deseja Cadastrar?"/>
 
 
-        <StackPanel Grid.Row="1" Margin="80,80,80,18">
+        <StackPanel Grid.Row="1" Margin="80,28,80,70">
             <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="30" Width="194">
 
-                <Button x:Name="btCadastrarCliente" Content="Cadastrar Cliente" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click"/>
-                <Button x:Name="btCadastrarFilme" Content="Cadastrar Filme" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_1"/>
-                <Button x:Name="btCadastrarFornecedor" Content="Cadastrae Fornecedor" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_2"/>
-                <Button x:Name="btCadastrarProdutora" Content="Cadastrar Produtora" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_3"/>
-                <Button x:Name="btCadastrarFuncionario" Content="Cadastrar Funcionario" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_4"/>
+                <Button x:Name="btCadastrarCliente" Content="Cadastrar Cliente" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click" Background="#FFF40C0C"/>
+                <Button x:Name="btCadastrarFilme" Content="Cadastrar Filme" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_1" Background="#FFF11212"/>
+                <Button x:Name="btCadastrarFornecedor" Content="Cadastrae Fornecedor" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_2" Background="#FFF71313"/>
+                <Button x:Name="btCadastrarProdutora" Content="Cadastrar Produtora" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_3" Background="#FFF10707"/>
+                <Button x:Name="btCadastrarFuncionario" Content="Cadastrar Funcionario" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_4" Background="#FFED1A1A"/>
 
             </StackPanel>
 
