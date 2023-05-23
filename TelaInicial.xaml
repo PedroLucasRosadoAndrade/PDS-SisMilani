@@ -18,7 +18,7 @@
                    FontSize="16" FontWeight="Bold" Padding="5" Text="Oque deseja Cadastrar?"/>
 
 
-        <StackPanel Grid.Row="1" Margin="80,28,80,70">
+        <StackPanel Grid.Row="1" Margin="80,28,80,55">
             <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="30" Width="194">
 
                 <Button x:Name="btCadastrarCliente" Content="Cadastrar Cliente" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click" Background="#FFF40C0C"/>
@@ -26,7 +26,7 @@
                 <Button x:Name="btCadastrarFornecedor" Content="Cadastrae Fornecedor" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_2" Background="#FFF71313"/>
                 <Button x:Name="btCadastrarProdutora" Content="Cadastrar Produtora" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_3" Background="#FFF10707"/>
                 <Button x:Name="btCadastrarFuncionario" Content="Cadastrar Funcionario" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_4" Background="#FFED1A1A"/>
-
+                <Button x:Name="btConsultarCadastro" Content="Consultar Cadastros" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_5" Background="#FFED1A1A"/>
             </StackPanel>
 
         </StackPanel>

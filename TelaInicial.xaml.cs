@@ -53,5 +53,11 @@ namespace ProjetoDePDS3_A
             WindowCadastrarFuncionario form = new WindowCadastrarFuncionario();
             form.ShowDialog();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            ListarCadastros form = new ListarCadastros();
+            form.Show();
+        }
     }
 }
