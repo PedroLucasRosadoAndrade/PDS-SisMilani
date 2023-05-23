@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjetoDePDS3_A"
         mc:Ignorable="d"
         Title="ListarFilme" Height="450" Width="800">
-    <Grid>
+    <Grid Background="black">
         
     </Grid>
 </Window>

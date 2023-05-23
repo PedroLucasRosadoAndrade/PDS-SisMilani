@@ -22,11 +22,11 @@
         <StackPanel Grid.Row="1" Margin="80,28,80,70">
             <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="30" Width="194">
 
-                <Button x:Name="btCadastrarCliente" Content="Cadastro de Fornecedores" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click" Background="#FFF40C0C"/>
-                <Button x:Name="btCadastrarFilme" Content="Cadastro de Filmes" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_1" Background="#FFF11212"/>
-                <Button x:Name="btCadastrarFornecedor" Content="Cadastros de Funcionários" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_2" Background="#FFF71313"/>
-                <Button x:Name="btCadastrarProdutora" Content="Cadastros de Produtoras" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_3" Background="#FFF10707"/>
-                <Button x:Name="btCadastrarFuncionario" Content="Cadastros de Clientes" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_4" Background="#FFED1A1A"/>
+                <Button x:Name="btListarForncedor" Content="Cadastro de Fornecedores" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click" Background="#FFF40C0C"/>
+                <Button x:Name="btListarFilmes" Content="Cadastro de Filmes" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_1" Background="#FFF11212"/>
+                <Button x:Name="btListarFuncionarios" Content="Cadastros de Funcionários" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_2" Background="#FFF71313"/>
+                <Button x:Name="btListarProdutoras" Content="Cadastros de Produtoras" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_3" Background="#FFF10707"/>
+                <Button x:Name="btListarClientes" Content="Cadastros de Clientes" Width="200" Margin="10 10" FontWeight="Bold" HorizontalAlignment="Center" Click="Button_Click_4" Background="#FFED1A1A"/>
 
             </StackPanel>
 
