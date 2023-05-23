@@ -70,6 +70,24 @@
     <Compile Include="compraIngresso.xaml.cs">
       <DependentUpon>compraIngresso.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListarCadastros.xaml.cs">
+      <DependentUpon>ListarCadastros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarCliente.xaml.cs">
+      <DependentUpon>ListarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarFilme.xaml.cs">
+      <DependentUpon>ListarFilme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarFornecedores.xaml.cs">
+      <DependentUpon>ListarFornecedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarFuncionarios.xaml.cs">
+      <DependentUpon>ListarFuncionarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarProdutores.xaml.cs">
+      <DependentUpon>ListarProdutores.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
@@ -97,6 +115,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="compraIngresso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarCadastros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarFilme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarFornecedores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarFuncionarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarProdutores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
