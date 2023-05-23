@@ -12,45 +12,51 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ProjetoDePDS3_A
+namespace ProjetoDePDS3_A.Views
 {
     /// <summary>
-    /// Lógica interna para ListarCadastros.xaml
+    /// Lógica interna para TelaInicial.xaml
     /// </summary>
-    public partial class ListarCadastros : Window
+    public partial class TelaInicial : Window
     {
-        public ListarCadastros()
+        public TelaInicial()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ListarFornecedores form = new ListarFornecedores();
-            form.Show();
+            CadastrarCliente form = new CadastrarCliente();
+            form.ShowDialog();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ListarFilme form =  new ListarFilme();
-            form.Show();
+            CadastrarFilme form = new CadastrarFilme();
+            form.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            ListarFuncionarios form = new ListarFuncionarios();
-            form.Show();
+            CadastrarFornecedor form = new CadastrarFornecedor();
+            form.ShowDialog();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-             ListarProdutores form = new ListarProdutores();    
-            form.Show();
+            CadastrarProdutora form = new CadastrarProdutora();
+            form.ShowDialog();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            ListarCliente form = new ListarCliente();   
+            WindowCadastrarFuncionario form = new WindowCadastrarFuncionario();
+            form.ShowDialog();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            ListarCadastros form = new ListarCadastros();
             form.Show();
         }
     }

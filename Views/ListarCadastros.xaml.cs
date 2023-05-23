@@ -12,51 +12,45 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ProjetoDePDS3_A
+namespace ProjetoDePDS3_A.Views
 {
     /// <summary>
-    /// Lógica interna para TelaInicial.xaml
+    /// Lógica interna para ListarCadastros.xaml
     /// </summary>
-    public partial class TelaInicial : Window
+    public partial class ListarCadastros : Window
     {
-        public TelaInicial()
+        public ListarCadastros()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarCliente form = new CadastrarCliente();
-            form.ShowDialog();
+            ListarFornecedores form = new ListarFornecedores();
+            form.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CadastrarFilme form = new CadastrarFilme();
-            form.ShowDialog();
+            ListarFilme form =  new ListarFilme();
+            form.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            CadastrarFornecedor form = new CadastrarFornecedor();
-            form.ShowDialog();
+            ListarFuncionarios form = new ListarFuncionarios();
+            form.Show();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            CadastrarProdutora form = new CadastrarProdutora();
-            form.ShowDialog();
+             ListarProdutores form = new ListarProdutores();    
+            form.Show();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            WindowCadastrarFuncionario form = new WindowCadastrarFuncionario();
-            form.ShowDialog();
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            ListarCadastros form = new ListarCadastros();
+            ListarCliente form = new ListarCliente();   
             form.Show();
         }
     }

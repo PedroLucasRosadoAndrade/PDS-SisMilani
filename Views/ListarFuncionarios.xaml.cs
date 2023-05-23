@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ProjetoDePDS3_A
+namespace ProjetoDePDS3_A.Views
 {
     /// <summary>
-    /// Lógica interna para CadastrarCliente.xaml
+    /// Lógica interna para ListarFuncionarios.xaml
     /// </summary>
-    public partial class CadastrarCliente : Window
+    public partial class ListarFuncionarios : Window
     {
-        public CadastrarCliente()
+        public ListarFuncionarios()
         {
             InitializeComponent();
         }

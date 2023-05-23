@@ -55,90 +55,92 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CadastrarCliente.xaml.cs">
+    <Compile Include="Views\CadastrarCliente.xaml.cs">
       <DependentUpon>CadastrarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarFilme.xaml.cs">
+    <Compile Include="Views\CadastrarFilme.xaml.cs">
       <DependentUpon>CadastrarFilme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarFornecedor.xaml.cs">
+    <Compile Include="Views\CadastrarFornecedor.xaml.cs">
       <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarProdutora.xaml.cs">
+    <Compile Include="Views\CadastrarProdutora.xaml.cs">
       <DependentUpon>CadastrarProdutora.xaml</DependentUpon>
     </Compile>
-    <Compile Include="compraIngresso.xaml.cs">
+    <Compile Include="Views\compraIngresso.xaml.cs">
       <DependentUpon>compraIngresso.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarCadastros.xaml.cs">
+    <Compile Include="Views\ListarCadastros.xaml.cs">
       <DependentUpon>ListarCadastros.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarCliente.xaml.cs">
+    <Compile Include="Views\ListarCliente.xaml.cs">
       <DependentUpon>ListarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarFilme.xaml.cs">
+    <Compile Include="Views\ListarFilme.xaml.cs">
       <DependentUpon>ListarFilme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarFornecedores.xaml.cs">
+    <Compile Include="Views\ListarFornecedores.xaml.cs">
       <DependentUpon>ListarFornecedores.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarFuncionarios.xaml.cs">
+    <Compile Include="Views\ListarFuncionarios.xaml.cs">
       <DependentUpon>ListarFuncionarios.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarProdutores.xaml.cs">
+    <Compile Include="Views\ListarProdutores.xaml.cs">
       <DependentUpon>ListarProdutores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\FuncionarioDAO.cs" />
-    <Compile Include="TelaInicial.xaml.cs">
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoDAO.cs" />
+    <Compile Include="Views\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowCadastrarFuncionario.xaml.cs">
+    <Compile Include="Views\WindowCadastrarFuncionario.xaml.cs">
       <DependentUpon>WindowCadastrarFuncionario.xaml</DependentUpon>
     </Compile>
-    <Page Include="CadastrarCliente.xaml">
+    <Page Include="Views\CadastrarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CadastrarFilme.xaml">
+    <Page Include="Views\CadastrarFilme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CadastrarFornecedor.xaml">
+    <Page Include="Views\CadastrarFornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CadastrarProdutora.xaml">
+    <Page Include="Views\CadastrarProdutora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="compraIngresso.xaml">
+    <Page Include="Views\compraIngresso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarCadastros.xaml">
+    <Page Include="Views\ListarCadastros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarCliente.xaml">
+    <Page Include="Views\ListarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarFilme.xaml">
+    <Page Include="Views\ListarFilme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarFornecedores.xaml">
+    <Page Include="Views\ListarFornecedores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarFuncionarios.xaml">
+    <Page Include="Views\ListarFuncionarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarProdutores.xaml">
+    <Page Include="Views\ListarProdutores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,11 +156,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TelaInicial.xaml">
+    <Page Include="Views\TelaInicial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowCadastrarFuncionario.xaml">
+    <Page Include="Views\WindowCadastrarFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,7 +196,6 @@
     <Folder Include="DataBase\" />
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

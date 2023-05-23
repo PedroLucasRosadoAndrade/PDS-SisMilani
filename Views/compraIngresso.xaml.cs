@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ProjetoDePDS3_A
+namespace ProjetoDePDS3_A.Views 
 {
     /// <summary>
-    /// Lógica interna para CadastrarFornecedor.xaml
+    /// Lógica interna para compraIngresso.xaml
     /// </summary>
-    public partial class CadastrarFornecedor : Window
+    public partial class compraIngresso : Window
     {
-        public CadastrarFornecedor()
+        public compraIngresso()
         {
             InitializeComponent();
         }
