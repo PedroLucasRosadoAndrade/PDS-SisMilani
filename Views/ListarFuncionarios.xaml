@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="ListarFuncionarios" Height="450" Width="800">
     <Grid Background="black">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="458*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                   FontSize="16" FontWeight="Bold" Padding="5" Text="Lista dos Funcionarios Cadastrados" Background="red"/>
+
+
+        <StackPanel Grid.Row="1" Margin="80,28,80,55">
+            <Grid Width="513" Background="White" Height="222" RenderTransformOrigin="0.497,0.503"/>
+
+        </StackPanel>
+
+
     </Grid>
 </Window>

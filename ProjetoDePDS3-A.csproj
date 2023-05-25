@@ -58,6 +58,9 @@
     <Compile Include="Views\CadastrarCliente.xaml.cs">
       <DependentUpon>CadastrarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarEstoque.xaml.cs">
+      <DependentUpon>CadastrarEstoque.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarFilme.xaml.cs">
       <DependentUpon>CadastrarFilme.xaml</DependentUpon>
     </Compile>
@@ -67,8 +70,14 @@
     <Compile Include="Views\CadastrarProdutora.xaml.cs">
       <DependentUpon>CadastrarProdutora.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarRecebimento.xaml.cs">
+      <DependentUpon>CadastrarRecebimento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\compraIngresso.xaml.cs">
       <DependentUpon>compraIngresso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmitirComprovante.xaml.cs">
+      <DependentUpon>EmitirComprovante.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListarCadastros.xaml.cs">
       <DependentUpon>ListarCadastros.xaml</DependentUpon>
@@ -104,6 +113,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastrarFilme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,7 +129,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarRecebimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\compraIngresso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EmitirComprovante.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
