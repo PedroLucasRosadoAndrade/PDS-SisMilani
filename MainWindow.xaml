@@ -5,69 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoDePDS3_A"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Login" Height="400" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
+        <StackPanel Margin="20">
+            <Image Source="/Imagens/logo.jpg" Margin="20 30 20 20"/>
+            <TextBox
+                x:Name="txtUsuario"
+                materialDesign:HintAssist.Hint="Usuário"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Margin="0 25 0 0"/>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <PasswordBox 
+                x:Name="passBoxSenha"
+                materialDesign:HintAssist.Hint="Senha"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                Margin="0 20 0 0"/>
 
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="8.*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                   FontSize="16" FontWeight="Bold" Padding="10" Text="Tela de Cadastro"/>
-
-
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
-
-            <Label Content="Nome" FontSize="16"> </Label>
-            <TextBox FontSize="16" Text=""/>
-
-            <Label Content="Cpf" FontSize="16" ></Label>
-            <TextBox FontSize="16" Text=""/>
-            
-            <Label Content="Email" FontSize="16"></Label>
-            <TextBox FontSize="16" Text=""/>
-
-            <Label Content="Telefone" FontSize="16"></Label>
-            <TextBox FontSize="16" Text=""/>
-
-            <Label Content="Sexo" FontSize="16"></Label>
-            <TextBox FontSize="16" Text=""/>
-
-            <Label Content="Data de Nascimento" FontSize="16"></Label>
-            <DatePicker />
+            <Button
+                x:Name="btnAcessar"
+                Content="Acessar"
+                Style="{StaticResource MaterialDesignFlatDarkBgButton}"
+                Margin="0 20 0 0" Click="BtnAcessar_Click"/>
 
         </StackPanel>
-
-
-        <StackPanel Grid.Column="1" Grid.Row="1" Margin="40">
-            <Label Content="Dados de Endereço" FontSize="16" HorizontalAlignment="Center"  FontWeight="Bold"/>
-
-            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                <Label Content="CEP" FontSize="16" />
-                <Button Content="Buscar nos Correios"/>
-                <TextBox FontSize="16" Text=""/>
-                
-                
-            </StackPanel>
-            
-            <TextBox FontSize="16" Text=""/>
-
-        </StackPanel>
-        
-
-        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Cancelar" Width="60" Margin="5 5 5 5"/>
-            <Button Content="Limpar" Width="60" Margin="5 5 5 5 "/>
-            <Button Content="Salvar" Width="60" Margin="5 5 5 5"/>
-        </StackPanel>
-
     </Grid>
 </Window>
