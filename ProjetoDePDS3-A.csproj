@@ -102,6 +102,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataBase\Conexao.cs" />
+    <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Helpers\Estado.cs" />
+    <Compile Include="Helpers\Validator.cs" />
+    <Compile Include="Interfaces\IDAO.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\EnderecoDAO.cs" />
+    <Compile Include="Models\Sexo.cs" />
+    <Compile Include="Models\SexoDAO.cs" />
     <Compile Include="Views\CadastrarCliente.xaml.cs">
       <DependentUpon>CadastrarCliente.xaml</DependentUpon>
     </Compile>
@@ -262,7 +271,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Compontes\" />
-    <Folder Include="DataBase\" />
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
   </ItemGroup>

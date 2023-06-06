@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetoDePDS3_A.Models;
 
 namespace ProjetoDePDS3_A.Views
 {
@@ -22,6 +23,22 @@ namespace ProjetoDePDS3_A.Views
         public ListarFornecedores()
         {
             InitializeComponent();
+            Loaded += ListarFuncionarios_Loaded;
+
+        }
+
+        private void LoadDataGrid()
+        {
+            try
+            {
+                var dao = new FuncionarioDAO();
+
+                dataGrid.ItemsSource = dao.List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

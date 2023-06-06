@@ -5,24 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoDePDS3_A.Views"
         mc:Ignorable="d"
-        Title="ListarFuncionarios" Height="450" Width="800">
-    <Grid Background="black">
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="FuncionarioListWindow" Height="800" Width="1100" WindowStartupLocation="CenterScreen">
+
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="458*"/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="57*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Menu IsMainMenu="True">
+            <MenuItem Header="_Arquivo">
+                <MenuItem Header="_Novo" Icon="{materialDesign:PackIcon Kind=ContentSave}" Click="MenuItem_Novo_Click"/>
+                <MenuItem  Header="Save As.." />
+                <MenuItem Header="Sair" InputGestureText="Ctrl+E" Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
+            </MenuItem>
+        </Menu>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                   FontSize="16" FontWeight="Bold" Padding="5" Text="Lista dos Funcionarios Cadastrados" Background="red"/>
-
-
-        <StackPanel Grid.Row="1" Margin="80,28,80,55">
-            <Grid Width="513" Background="White" Height="222" RenderTransformOrigin="0.497,0.503"/>
-
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Funcionários"
+                  Background="BurlyWood"
+                  Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                  Padding="10"/>
         </StackPanel>
 
+        <DataGrid Grid.Row="2" Margin="5,5,5,5" x:Name="dataGrid" IsReadOnly="true"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nome do Funcionário" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="Sexo" Binding="{Binding Sexo.Nome}"/>
+                <DataGridTextColumn Header="CPF" Binding="{Binding CPF}"/>
+                <DataGridTextColumn Header="E-mail" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Celular" Binding="{Binding Celular}"/>
+                <DataGridTextColumn Header="Função" Binding="{Binding Funcao}"/>
+                <DataGridTextColumn Header="Salário" Binding="{Binding Salario, ConverterCulture='pt-BR', StringFormat=C}"/>
+
+                <DataGridTemplateColumn Header="Ações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource MaterialDesignIconForegroundButton}" 
+                                        Content="{materialDesign:PackIcon Eye}"
+                                        ToolTip="Visualizar Registro" Margin="0 0 5 0" Click="Button_Update_Click" />
+                                <Button Style="{StaticResource MaterialDesignIconForegroundButton}" 
+                                        Content="{materialDesign:PackIcon Delete}"
+                                        ToolTip="Excluir Registro" Click="Button_Delete_Click" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
