@@ -96,6 +96,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock.resources">
+      <HintPath>..\tec-info-ds-aulas\projeto\NetFramework\SpaceSistemas\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
