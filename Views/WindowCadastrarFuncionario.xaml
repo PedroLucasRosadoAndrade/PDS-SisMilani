@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
-                   FontSize="16" FontWeight="Bold" Padding="5" Text="Cadastro de Funcionário" Margin="151,0,0,0" Background="#FFF32A2A"/>
+                   FontSize="15" FontWeight="Bold" Padding="5" Text="Cadastro de Funcionário" Margin="151,0,0,0" Background="#FFF32A2A"/>
 
 
         <!--<StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
