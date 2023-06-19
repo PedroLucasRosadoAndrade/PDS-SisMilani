@@ -8,7 +8,7 @@
           
         
         Title="WindowCadastrarFuncionario" Height="783" Width="842">
-    <Grid  Background= "Black" >
+    <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -21,8 +21,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
-                   FontSize="15" FontWeight="Bold" Padding="5" Text="Cadastro de Funcionário" Margin="151,0,0,0" Background="#FFF32A2A"/>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left"
+                   FontSize="15" FontWeight="Bold" Padding="100 10" Text="Cadastro de Funcionário" Margin="0,0,0,613" Background="#FFF32A2A" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="842"/>
 
 
         <!--<StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
@@ -60,38 +60,40 @@
             </StackPanel>-->
 
             <Label Content="Nome" FontSize="16" FontWeight="Bold" Foreground="#FFFAF7F7"></Label>
-            <TextBox FontSize="16" Text="" Width="205" Margin="0 0 380 1" Foreground="#FFF6ECEC" Background="#FFFFFDFD"/>
+            <TextBox x:Name="txtNome" FontSize="16" Width="200" Margin="0 0 130 0"/>
 
             <Label Content="E-mail" FontSize="16" FontWeight="Bold" Foreground="#FFFAF5F5"></Label>
-            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 380 1"/>
+            <TextBox x:Name="txtEmail" FontSize="16" Text="" Width="200" Margin="0 0 130 1"/>
 
             <Label Content="CPF" FontSize="16" FontWeight="Bold" Foreground="#FFF9F5F5"></Label>
-            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 380 1"/>
+            <TextBox x:Name="txtCPF" FontSize="16" Text="" Width="200" Margin="0 0 130 1"/>
 
             <Label Content="RG" FontSize="16" FontWeight="Bold" Foreground="#FFF9F4F4"></Label>
-            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 380 1" Foreground="White"/>
+            <TextBox x:Name="txtRG" FontSize="16" Text="" Width="200" Margin="0 0 130 1" Foreground="White"/>
 
             <Label Content="Celular" FontSize="16" FontWeight="Bold" Foreground="#FFF9F4F4"></Label>
-            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 380 1"/>
+            <TextBox x:Name="txtCPF1" FontSize="16" Text="" Width="200" Margin="0 0 130 1"/>
 
             <Label Content="Sexo" FontSize="16" FontWeight="Bold" Foreground="#FFF7F7FD"></Label>
             <RadioButton Content="Masculino" FontSize="16" FontWeight="Bold" Margin="10" Foreground="#FFF4F4F9"/>
             <RadioButton Content="Feminino" FontSize="16" FontWeight="Bold" Margin="10" Foreground="#FFF7F7FA"/>
             <RadioButton Content="Bahiano" FontSize="16" FontWeight="Bold" Margin="10" Foreground="#FFF4F4FA"/>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+            
 
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="40">
             <Label Content="Data de Nascimento" FontSize="16" FontWeight="Bold" Foreground="#FFF6F2F2"></Label>
-            <DatePicker Width="200" FontSize="16" Margin="0 0 380 1"/>
+            <DatePicker Width="200" FontSize="16" Margin="0 0 130 1"/>
 
             <Label Content="Data de Nascimento" FontSize="16" FontWeight="Bold" Foreground="#FFF7F2F2" ></Label>
             <ComboBox FontSize="16" Width="200" Margin="0 0 380 1"/>
 
             <Label Content="Salario" FontSize="16" FontWeight="Bold" Foreground="#FFF1F0F0"></Label>
-            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 380 1"/>
+            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 130 1"/>
 
             <Label Content="Função" FontSize="16" FontWeight="Bold" Foreground="#FFF1F0F0"></Label>
-            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 380 1"/>
+            <TextBox FontSize="16" Text="" Width="200" Margin="0 0 130 1"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
