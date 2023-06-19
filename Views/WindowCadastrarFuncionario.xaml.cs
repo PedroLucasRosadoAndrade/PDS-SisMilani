@@ -28,8 +28,13 @@ namespace ProjetoDePDS3_A.Views
         public WindowCadastrarFuncionario()
         {
             InitializeComponent();
-            Loaded += FuncionarioFormWindow_Loaded;
+            Loaded += WindowCadastrarFuncionario_Loaded;
 
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
 
         public WindowCadastrarFuncionario(int id)
@@ -39,7 +44,7 @@ namespace ProjetoDePDS3_A.Views
             Loaded += WindowCadastrarFuncionario_Loaded;
         }
 
-        private void FuncionarioFormWindow_Loaded(object sender, RoutedEventArgs e)
+        private void WindowCadastrarFuncionario_Loaded(object sender, RoutedEventArgs e)
         {
             _funcionario = new Funcionario();
 
@@ -83,7 +88,7 @@ namespace ProjetoDePDS3_A.Views
 
         private bool Validate()
         {
-            var validator = new FuncionarioValitador();
+            var validator = new FuncionarioValitator();
             var result = validator.Validate(_funcionario);
 
             if (!result.IsValid)
