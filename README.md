@@ -9,3 +9,5 @@
 *Marco - Cadastrar Produtora
 
 *Pedro Lucas - Cadastar Funcionário
+
+*Nicolas
