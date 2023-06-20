@@ -69,7 +69,7 @@ namespace ProjetoDePDS3_A.Views
         }
         private bool Validate()
         {
-            var validator = new FilmeValitator;
+            var validator = new FilmeValitator();
             var result = validator.Validate(_filmes);
 
             if (!result.IsValid)

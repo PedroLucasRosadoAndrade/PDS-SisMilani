@@ -1,12 +1,47 @@
-﻿<Window x:Class="ProjetoDePDS3_A.Views.EmitirComprovante"
+﻿<Window x:Class="WpfApp1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProjetoDePDS3_A.Views"
-        mc:Ignorable="d"
-        Title="EmitirComprovante" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Emitir Comprovante" Height="800" Width="1000">
+    <Viewbox Stretch="Uniform">
+        <Grid Background="Black" Width="326">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Título -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Comprovante" FontWeight="Bold" Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="10,20,10,5"/>
+
+            <!-- Nome do Cliente -->
+            <Label Grid.Row="1" Grid.Column="0" Content="Nome do Cliente:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="ClientName" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Código do Comprovante -->
+            <Label Grid.Row="2" Grid.Column="0" Content="Código do Comprovante:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="VoucherCode" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Data do Comprovante -->
+            <Label Grid.Row="3" Grid.Column="0" Content="Data do Comprovante:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="VoucherDate" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Valor do Comprovante -->
+            <Label Grid.Row="4" Grid.Column="0" Content="Valor do Comprovante:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="VoucherValue" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Botões -->
+            <Button Grid.Row="5" Grid.Column="0" Content="Add" Background="Red" Foreground="White" Margin="10,5,10,5"/>
+            <Button Grid.Row="5" Grid.Column="1" Content="Salvar" Background="Red" Foreground="White" Margin="10,5,10,5"/>
+            <Button Grid.Row="6" Grid.Column="0" Content="Editar" Background="Red" Foreground="White" Margin="10,5,10,5"/>
+            <Button Grid.Row="6" Grid.Column="1" Content="Excluir" Background="Red" Foreground="White" Margin="10,5,10,5"/>
+        </Grid>
+    </Viewbox>
 </Window>

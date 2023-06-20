@@ -1,14 +1,50 @@
-﻿<Page x:Class="ProjetoDePDS3_A.Views.CadastrarCaixa"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ProjetoDePDS3_A.Views"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="CadastrarCaixa">
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cadastro de Caixa" Height="800" Width="800">
+    <Viewbox Stretch="Uniform" >
+        <Grid Background="Black" Height="283" Width="288">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
-    <Grid>
-        
-    </Grid>
-</Page>
+            <!-- Título -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Cadastro de Caixa" FontWeight="Bold" Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="10,20,10,5"/>
+
+            <!-- Data Inicial -->
+            <Label Grid.Row="1" Grid.Column="0" Content="Data Inicial:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="DataInicial" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+            <!-- Hora de Abertura -->
+            <Label Grid.Row="2" Grid.Column="0" Content="Hora de Abertura:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="HoraAbertura" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Hora de Fechamento -->
+            <Label Grid.Row="3" Grid.Column="0" Content="Hora de Fechamento:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="HoraFechamento" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Saldo Inicial -->
+            <Label Grid.Row="4" Grid.Column="0" Content="Saldo Inicial:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="SaldoInicial" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Saldo Final -->
+            <Label Grid.Row="5" Grid.Column="0" Content="Saldo Final:" Foreground="White" Margin="10,5,10,5"/>
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="SaldoFinal" Background="White" Foreground="Black" Margin="10,5,10,5"/>
+
+            <!-- Botões -->
+            <Button Grid.Row="6" Grid.Column="0" Content="Salvar" Background="Red" Foreground="White" Margin="10,5,10,5"/>
+            <Button Grid.Row="6" Grid.Column="1" Content="Editar" Background="Red" Foreground="White" Margin="10,5,10,5"/>
+            <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Cancelar" Background="Red" Foreground="White" HorizontalAlignment="Center" Margin="10,5,10,5"/>
+        </Grid>
+    </Viewbox>
+</Window>

@@ -10,7 +10,7 @@ namespace ProjetoDePDS3_A.Interfaces
     ///     Interface (contrato) para classes DAO
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    internal class IDAO<T>
+    interface IDAO<T>
     {
         void Insert(T t);
 

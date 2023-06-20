@@ -24,5 +24,6 @@ namespace ProjetoDePDS3_A.Views
         {
             InitializeComponent();
         }
+
     }
 }

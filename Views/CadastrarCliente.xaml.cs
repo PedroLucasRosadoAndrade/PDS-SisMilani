@@ -88,8 +88,8 @@ namespace ProjetoDePDS3_A.Views
             if (int.TryParse(txtNumero.Text, out int numero))
                 _cliente.Endereco.Numero = numero;*/
 
-            if (txtCidade.SelectedItem != null)
-                _cliente.Endereco.Cidade = txtCidade.SelectedItem as string;
+            /*if (txtCidade.SelectedItem != null)
+                _cliente.Endereco.Cidade = txtCidade.SelectedItem as string;*/
 
             SaveData();
         }
@@ -159,7 +159,7 @@ namespace ProjetoDePDS3_A.Views
                 txtEmail.Text = _cliente.Email;
                 txtCep.Text = _cliente.CEP;
                 txtUF.Text = _cliente.UF;
-                txtCidade.Text = _cliente.Cidade;
+                //txtCidade.Text = _cliente.Cidade;
 
                 /*if (_cliente.Sexo != null)
                     comboBoxSexo.SelectedValue = _cliente.Sexo.Id;*/
@@ -171,7 +171,7 @@ namespace ProjetoDePDS3_A.Views
                     TxtRua.Text = _cliente.Endereco.Rua;
                     txtCep.Text = _cliente.Endereco.Cidade;
 
-                    txtCidade.SelectedValue = _cliente.Endereco.Estado;
+                    //txtCidade.SelectedValue = _cliente.Endereco.Estado;
                 }
 
             }
@@ -200,7 +200,7 @@ namespace ProjetoDePDS3_A.Views
         {
             try
             {
-                txtCidade.ItemsSource = Estado.List();
+                //txtCidade.ItemsSource = Estado.List();
                 //comboBoxSexo.ItemsSource = new SexoDAO().List();
             }
             catch (Exception ex)
@@ -220,7 +220,7 @@ namespace ProjetoDePDS3_A.Views
             txtEmail.Text = "";
             txtCep.Text = "";
             txtUF.Text = "";
-            txtCidade.Text = "";
+            //txtCidade.Text = "";
 
 
         }
