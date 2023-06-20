@@ -20,7 +20,12 @@
             <RowDefinition Height="66.271"/>
         </Grid.RowDefinitions>
 
-        <TextBlock  FontSize="24" Margin="346,0,0,37" Width="748" Height="NaN" FontWeight="Bold" HorizontalAlignment="Left" Grid.ColumnSpan="2"><Run Text="Dados Pessoais" Background="Red"/></TextBlock>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left"
+                   FontSize="24" FontWeight="Bold" Padding="5" Text="Dados Pessoais" Background="Red" Width="973" Foreground="White" Margin="0,0,0,21"/>
+
+        <!--<TextBlock  FontSize="24" Margin="346,0,0,37" Width="748" Height="NaN" FontWeight="Bold" HorizontalAlignment="Center"
+                    Grid.ColumnSpan="2"><Run Text="Dados Pessoais" Background="Red"/></TextBlock>-->
 
         <StackPanel Grid.Column="0" Margin="11,56,580,35" Orientation="Vertical" Height="NaN" Width="NaN" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Label FontSize="24" Content="Nome Completo" Width="647" Height="44" Foreground="White" FontWeight="Bold" />
@@ -30,18 +35,18 @@
 
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Height="NaN" Margin="324,610,0,15" Width="608" Grid.ColumnSpan="2" Grid.RowSpan="3">
-            <Button x:Name="btCancelar" Content="CANCELAR" Width="195" Background="White"  Foreground="Black" FontWeight="Bold" FontSize="24"  />
-            <Button x:Name="btLimpar" Content="LIMPAR" Width="195" Background="White"  Foreground="Black" FontWeight="Bold"  FontSize="24"/>
-            <Button x:Name="btnSalvar" Content="SALVAR" Width="202" Background="White" Foreground="Black" FontWeight="Bold"  FontSize="24" Click="btnSalvar_Click" >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-0.397"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
+            <Button x:Name="btCancelar" Content="CANCELAR" Width="195"  Foreground="Black" FontWeight="Bold" FontSize="24" Background="#FFC94F34" Margin="5 5 10 5"/>
+            <Button x:Name="btLimpar" Content="LIMPAR" Width="195" Background="White"  Foreground="Black" FontWeight="Bold"  FontSize="24" Margin="5 5 10 5"/>
+            <Button x:Name="btnSalvar" Content="SALVAR" Width="202" Foreground="Black" FontWeight="Bold"  FontSize="24" Click="btnSalvar_Click" Background="#FF90DD7E" Margin="5 5 5 5"/>
+            <!--<Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.397"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>-->
+
         </StackPanel>
         <Label FontSize="24" Content="CPF" Foreground="White" Margin="30,56,8,554" Grid.Column="1" Grid.RowSpan="2" FontWeight="Bold" />
         <TextBox x:Name="txtCpf" FontSize="19" Text="" Margin="30,32,79,545" Grid.Row="1" Grid.Column="1" Height="NaN" Width="NaN"/>
@@ -55,19 +60,19 @@
         <ComboBox x:Name="txtUF" FontSize="19" Text=""  Margin="15,285,304,293" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1"/>
         <Label FontSize="24" Content="UF" Foreground="White" Margin="15,244,290,301" Grid.Row="1" Width="NaN" Grid.Column="1" FontWeight="Bold" />
 
-        <Label FontSize="24" Content="Município" Foreground="White" Margin="305,244,0,300" Grid.Column="1" Grid.Row="1" Width="NaN" FontWeight="Bold" />
-        <ComboBox x:Name="txtEstado" FontSize="19" Text="" Margin="305,283,19,294" Grid.Column="1" Grid.Row="1" Height="NaN" Width="NaN"/>
+        <Label FontSize="24" Content="Cidade" Foreground="White" Margin="305,244,0,300" Grid.Column="1" Grid.Row="1" Width="NaN" FontWeight="Bold" />
+        <ComboBox x:Name="txtCidade" FontSize="19" Text="" Margin="305,283,19,294" Grid.Column="1" Grid.Row="1" Height="NaN" Width="NaN"/>
 
-        <Label FontSize="24" Content="Endereço" Foreground="White" Margin="28,354,24,64" Grid.Row="1" Width="NaN" FontWeight="Bold" />
+        <Label FontSize="24" Content="Senha" Foreground="White" Margin="28,354,24,64" Grid.Row="1" Width="NaN" FontWeight="Bold" />
         <TextBox x:Name="TxtSenha" FontSize="19" Text=""  Margin="37,395,580,175" Grid.Row="1" Height="NaN" Width="NaN" Grid.ColumnSpan="2"/>
 
         <Label FontSize="24" Content="Data de Nascimento" Foreground="White" Margin="66,354,-132,135" Grid.Row="1" Grid.Column="1" FontWeight="Bold" />
         <DatePicker x:Name="dtPickerDataNascimento" FontSize="19" Text="" Margin="66,395,147,175" Grid.Row="1" Grid.Column="1" Width="NaN" Height="NaN"/>
 
-        <Label FontSize="24" Content="Complemento" Foreground="White" Margin="66,476,-17,38" Grid.Row="1" Grid.Column="1" Width="NaN" FontWeight="Bold" />
+        <Label FontSize="24" Content="RG" Foreground="White" Margin="66,476,-17,38" Grid.Row="1" Grid.Column="1" Width="NaN" FontWeight="Bold" />
         <TextBox x:Name="TxtRG" FontSize="19" Text="" Margin="66,516,140,50" Grid.Row="1" Height="NaN" Width="NaN" Grid.Column="1"/>
 
-        <Label FontSize="24" Content="Bairro" Foreground="White" Margin="28,476,110,0" Grid.Row="1" Width="NaN" Height="NaN" Grid.RowSpan="3" FontWeight="Bold" />
+        <Label FontSize="24" Content="Rua" Foreground="White" Margin="28,476,110,0" Grid.Row="1" Width="NaN" Height="NaN" Grid.RowSpan="3" FontWeight="Bold" />
         <TextBox x:Name="TxtRua" FontSize="19" Text="" Margin="36,516,0,50" Grid.Row="1" Height="NaN" Width="NaN"/>
         <TextBox x:Name="txtTelefone" FontSize="19" Text="" Margin="14,115,10,460" Grid.Row="1" Height="NaN" Width="NaN"/>
         <TextBox x:Name="txtNome" FontSize="19" Text="" Margin="18,29,6,545" Grid.Row="1" Height="NaN" Width="NaN"/>

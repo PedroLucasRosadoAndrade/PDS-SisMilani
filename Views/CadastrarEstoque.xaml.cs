@@ -11,11 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ProjetoDePDS3_A.Models;
-using ProjetoDePDS3_A.Helpers;
 using MySqlX.XDevAPI;
 using System.Runtime.Remoting.Messaging;
 using System.Windows.Media.TextFormatting;
+using ProjetoDePDS3_A.Models;
+using ProjetoDePDS3_A.Helpers;
 
 namespace ProjetoDePDS3_A.Views
 {
@@ -26,7 +26,7 @@ namespace ProjetoDePDS3_A.Views
     {
         private int _id;
 
-        private Cliente _estoque;
+        private Estoque _estoque;
         public CadastrarEstoque()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace ProjetoDePDS3_A.Views
 
         private void CadastrarEstoque_Loaded(object sender, RoutedEventArgs e)
         {
-            _estoque = new Cliente();
+            _estoque = new Estoque();
 
             LoadComboBox();
 
@@ -54,18 +54,19 @@ namespace ProjetoDePDS3_A.Views
         {
             _estoque.Nome = txtNome.Text;
             _estoque.Unidade = txtUnidade.Text;
-            _estoque.Co = txtCodigo.Text;
-            _estoque.Telefone = txtCategoria.Text;
-            _estoque.Email = TxtEstoAnt.Text;
-            _estoque.CEP = txtEstoAtu.Text;
+            _estoque.CodigoEsto = txtCodigo.Text;
+            _estoque.Categoria = txtCategoria.Text;
+            _estoque.EstoqueAnterior = TxtEstoAnt.Text;
+            _estoque.EstoqueAtual = txtEstoAtu.Text;
+            
            
 
 
             /*if (double.TryParse(txtSalario.Text, out double salario))
                 _cliente.Salario = salario;*/
 
-            if (dtPickerDataNascimento.SelectedDate != null)
-                _estoque.DataNascimento = (DateTime)dtPickerDataNascimento.SelectedDate;
+            /*if (dtPickerDataNascimento.SelectedDate != null)
+                _estoque.DataNascimento = (DateTime)dtPickerDataNascimento.SelectedDate;*/
 
             /*if (comboBoxSexo.SelectedItem != null)
                 _cliente.Sexo = comboBoxSexo.SelectedItem as Sexo;*/
@@ -78,16 +79,16 @@ namespace ProjetoDePDS3_A.Views
             if (int.TryParse(txtNumero.Text, out int numero))
                 _cliente.Endereco.Numero = numero;*/
 
-            if (txtEstado.SelectedItem != null)
-                _estoque.Endereco.Estado = txtEstado.SelectedItem as string;
+            /*if (txtEstado.SelectedItem != null)
+                _estoque.Endereco.Estado = txtEstado.SelectedItem as string;*/
 
             SaveData();
         }
 
         private bool Validate()
         {
-            var validator = new ClienteValitator();
-            var result = validator.Validate(_cliente);
+            var validator = new EstoqueValidator();
+            var result = validator.Validate(_estoque);
 
             if (!result.IsValid)
             {
@@ -114,13 +115,13 @@ namespace ProjetoDePDS3_A.Views
                     var dao = new ClienteDAO();
                     var text = "atualizado";
 
-                    if (_cliente.Id == 0)
+                    if (_estoque.Id == 0)
                     {
-                        dao.Insert(_cliente);
+                        dao.Insert(_estoque);
                         text = "adicionado";
                     }
                     else
-                        dao.Update(_cliente);
+                        dao.Update(_estoque);
 
                     MessageBox.Show($"O Funcionário foi {text} com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
                     CloseFormVerify();

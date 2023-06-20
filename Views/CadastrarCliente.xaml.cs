@@ -61,6 +61,7 @@ namespace ProjetoDePDS3_A.Views
         {
             _cliente.Nome = txtNome.Text;
             _cliente.RG = TxtRG.Text;
+            _cliente.Cidade = txtCidade.Text;
             _cliente.UF = txtUF.Text;
             _cliente.Telefone = txtTelefone.Text;
             _cliente.Email = txtEmail.Text;
@@ -87,8 +88,8 @@ namespace ProjetoDePDS3_A.Views
             if (int.TryParse(txtNumero.Text, out int numero))
                 _cliente.Endereco.Numero = numero;*/
 
-            if (txtEstado.SelectedItem != null)
-                _cliente.Endereco.Estado = txtEstado.SelectedItem as string;
+            if (txtCidade.SelectedItem != null)
+                _cliente.Endereco.Cidade = txtCidade.SelectedItem as string;
 
             SaveData();
         }
@@ -157,6 +158,8 @@ namespace ProjetoDePDS3_A.Views
                 txtTelefone.Text = _cliente.Telefone;
                 txtEmail.Text = _cliente.Email;
                 txtCep.Text = _cliente.CEP;
+                txtUF.Text = _cliente.UF;
+                txtCidade.Text = _cliente.Cidade;
 
                 /*if (_cliente.Sexo != null)
                     comboBoxSexo.SelectedValue = _cliente.Sexo.Id;*/
@@ -168,7 +171,7 @@ namespace ProjetoDePDS3_A.Views
                     TxtRua.Text = _cliente.Endereco.Rua;
                     txtCep.Text = _cliente.Endereco.Cidade;
 
-                    txtEstado.SelectedValue = _cliente.Endereco.Estado;
+                    txtCidade.SelectedValue = _cliente.Endereco.Estado;
                 }
 
             }
@@ -197,7 +200,7 @@ namespace ProjetoDePDS3_A.Views
         {
             try
             {
-                txtEstado.ItemsSource = Estado.List();
+                txtCidade.ItemsSource = Estado.List();
                 //comboBoxSexo.ItemsSource = new SexoDAO().List();
             }
             catch (Exception ex)
@@ -216,6 +219,9 @@ namespace ProjetoDePDS3_A.Views
             txtTelefone.Text = "";
             txtEmail.Text = "";
             txtCep.Text = "";
+            txtUF.Text = "";
+            txtCidade.Text = "";
+
 
         }
 

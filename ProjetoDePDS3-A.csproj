@@ -118,6 +118,7 @@
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Estoque.cs" />
     <Compile Include="Models\EstoqueDAO.cs" />
+    <Compile Include="Models\EstoqueValidator.cs" />
     <Compile Include="Models\Filmes.cs" />
     <Compile Include="Models\FilmesDAO.cs" />
     <Compile Include="Models\FuncionarioValitator.cs" />
