@@ -18,7 +18,7 @@ namespace ProjetoDePDS3_A.Models
             conn = new Conexao();
         }
 
-        public void Delete(Produto t)
+        public void Delete(Estoque t)
         {
             throw new NotImplementedException();
         }
@@ -40,7 +40,7 @@ namespace ProjetoDePDS3_A.Models
                 List<Estoque> list = new List<Estoque>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM produto";
+                query.CommandText = "SELECT * FROM Estoque";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -48,10 +48,13 @@ namespace ProjetoDePDS3_A.Models
                 {
                     list.Add(new Estoque()
                     {
-                        Id = reader.GetInt32("cod_prod"),
-                        Nome = reader.GetString("nome_prod"),
-                        Unidade = reader.GetString("unidade_prod"),
-                        ValorCompra = reader.GetDouble("valor_compra_prod")
+                        Id = reader.GetInt32("id_est"),
+                        Nome = reader.GetString("unidade_est"),
+                        Unidade = reader.GetString("cod_est"),
+                        CodigoEsto = reader.GetString("categoria_est"),
+                        Categoria = reader.GetString("data_est"),
+                        EstoqueAnterior = reader.GetString("valor_est"),
+                        EstoqueAtual = reader.GetString("valor_est")
                     });
                 }
 

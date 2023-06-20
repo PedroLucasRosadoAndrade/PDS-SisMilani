@@ -14,11 +14,15 @@ namespace ProjetoDePDS3_A.Models
 
         public string Unidade { get; set; }
 
-        public Double ValorCompra { get; set; }
+        public string CodigoEsto { get; set; }
 
-        public Double ValorVenda { get; set; }
+        public string Categoria { get; set; }
 
-        private bool _selected = false;
+        public string EstoqueAnterior { get; set; }
+
+        public string EstoqueAtual { get; set; }
+
+        /*private bool _selected = false;
 
         public bool IsSelected
         {
@@ -30,6 +34,6 @@ namespace ProjetoDePDS3_A.Models
             {
                 _selected = value;
             }
-        }
+        }*/
     }
 }
