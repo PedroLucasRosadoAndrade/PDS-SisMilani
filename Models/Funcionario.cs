@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoDePDS3_A.Models
 {
-    internal class Funcionario
+    internal class Filme
     {
         public int Id { get; set; }
 

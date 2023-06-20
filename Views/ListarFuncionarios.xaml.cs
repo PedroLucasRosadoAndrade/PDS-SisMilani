@@ -54,7 +54,7 @@ namespace ProjetoDePDS3_A.Views
 
         private void Button_Update_Click(object sender, RoutedEventArgs e)
         {
-            var funcionarioSelected = dataGrid.SelectedItem as Funcionario;
+            var funcionarioSelected = dataGrid.SelectedItem as Filme;
 
             var window = new WindowCadastrarFuncionario(funcionarioSelected.Id);
             window.ShowDialog();
@@ -63,7 +63,7 @@ namespace ProjetoDePDS3_A.Views
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            var funcionarioSelected = dataGrid.SelectedItem as Funcionario;
+            var funcionarioSelected = dataGrid.SelectedItem as Filme;
 
             var result = MessageBox.Show($"Deseja realmente remover o funcionário `{funcionarioSelected.Nome}`?", "Confirmação de Exclusão",
                 MessageBoxButton.YesNo, MessageBoxImage.Warning);

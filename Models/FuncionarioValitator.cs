@@ -7,7 +7,7 @@ using FluentValidation;
 
 namespace ProjetoDePDS3_A.Models
 {
-    internal class FuncionarioValitator : AbstractValidator<Funcionario>
+    internal class FuncionarioValitator : AbstractValidator<Filme>
     {
         public FuncionarioValitator()
         {

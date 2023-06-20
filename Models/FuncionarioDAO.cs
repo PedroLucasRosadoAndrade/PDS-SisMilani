@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace ProjetoDePDS3_A.Models
 {
-    internal class FuncionarioDAO : IDAO<Funcionario>
+    internal class FuncionarioDAO : IDAO<Filme>
     {
         private static Conexao conn;
 
@@ -19,7 +19,7 @@ namespace ProjetoDePDS3_A.Models
             conn = new Conexao();
         }
 
-        public void Delete(Funcionario t)
+        public void Delete(Filme t)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace ProjetoDePDS3_A.Models
             }
         }
 
-        public Funcionario GetById(int id)
+        public Filme GetById(int id)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace ProjetoDePDS3_A.Models
                 if (!reader.HasRows)
                     throw new Exception("Nenhum registro foi encontrado!");
 
-                var funcionario = new Funcionario();
+                var funcionario = new Filme();
 
                 while (reader.Read())
                 {
@@ -106,7 +106,7 @@ namespace ProjetoDePDS3_A.Models
             }
         }
 
-        public void Insert(Funcionario t)
+        public void Insert(Filme t)
         {
             try
             {
@@ -167,11 +167,11 @@ namespace ProjetoDePDS3_A.Models
             }
         }
 
-        public List<Funcionario> List()
+        public List<Filme> List()
         {
             try
             {
-                List<Funcionario> list = new List<Funcionario>();
+                List<Filme> list = new List<Filme>();
 
                 var query = conn.Query();
                 query.CommandText = "SELECT * FROM funcionario LEFT JOIN sexo ON cod_sex = cod_sex_fk";
@@ -180,7 +180,7 @@ namespace ProjetoDePDS3_A.Models
 
                 while (reader.Read())
                 {
-                    list.Add(new Funcionario()
+                    list.Add(new Filme()
                     {
                         Id = reader.GetInt32("cod_func"),
                         Nome = DAOHelper.GetString(reader, "nome_func"),
@@ -207,7 +207,7 @@ namespace ProjetoDePDS3_A.Models
             }
         }
 
-        public void Update(Funcionario t)
+        public void Update(Filme t)
         {
             try
             {
