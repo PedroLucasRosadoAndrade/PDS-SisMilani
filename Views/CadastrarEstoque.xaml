@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjetoDePDS3_A.Views"
         mc:Ignorable="d"
         Title="CadastrarEstoque" Height="450" Width="800">
-    <Grid >
+    <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -20,42 +20,42 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                   FontSize="16" FontWeight="Bold" Padding="10" Text="Tela de Cadastro"/>
+                   FontSize="16" FontWeight="Bold" Padding="10" Text="Cadastro de Estoque" Background="Red" Width="799"/>
 
 
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
 
-            <Label Content="Nome" FontSize="16"></Label>
+            <Label Content="Nome" FontSize="16 " Foreground="White"></Label>
             <TextBox FontSize="16" Text=""/>
 
-            <Label Content="Codigo" FontSize="16" Margin="0 10 0 0"></Label>
+            <Label Content="Codigo" FontSize="16" Margin="0 10 0 0" Foreground="White"></Label>
             <TextBox FontSize="16" Text=""/>
 
-            <Label Content="Unidade" FontSize="16"  Margin="0 10 0 0"></Label>
+            <Label Content="Unidade" FontSize="16"  Margin="0 10 0 0" Foreground="White"></Label>
             <TextBox FontSize="16" Text=""/>
 
-            <Label Content="Categoria" FontSize="16"  Margin="0 10 0 0"></Label>
+            <Label Content="Categoria" FontSize="16"  Margin="0 10 0 0" Foreground="White"></Label>
             <TextBox FontSize="16" Text=""/>
 
         </StackPanel>
 
 
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="40">
-            <Label Content="Dados de Endereço" FontSize="16" HorizontalAlignment="Center"  FontWeight="Bold"/>
+            <Label Content="Dados de Endereço" FontSize="16" HorizontalAlignment="Center"  FontWeight="Bold" Foreground="White"/>
 
-            <Label Content="Estoque Anterior" FontSize="16" />
+            <Label Content="Estoque Anterior" FontSize="16" Foreground="White"/>
             <ComboBox FontSize="16" Text=""/>
 
-            <Label Content="Estoque Atual" FontSize="16"  Margin="0 10 0 0"/>
+            <Label Content="Estoque Atual" FontSize="16"  Margin="0 10 0 0" Foreground="White"/>
             <ComboBox FontSize="16" Text=""/>
-            
+
         </StackPanel>
 
 
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Cancelar" Width="60" Margin="5 5 5 5"/>
+            <Button Content="Cancelar" Width="60" Margin="5 5 5 5" Background="#FFC94F34"/>
             <Button Content="Limpar" Width="60" Margin="5 5 5 5 "/>
-            <Button Content="Salvar" Width="60" Margin="5 5 5 5"/>
+            <Button Content="Salvar" Width="60" Margin="5 5 5 5" Background="#FF90DD7E"/>
         </StackPanel>
 
     </Grid>

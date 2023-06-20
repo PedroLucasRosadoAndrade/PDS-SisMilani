@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetoDePDS3_A.Models;
+using ProjetoDePDS3_A.Helpers;
+using System.Windows.Media.TextFormatting;
 
 namespace ProjetoDePDS3_A.Views
 {
@@ -19,9 +22,186 @@ namespace ProjetoDePDS3_A.Views
     /// </summary>
     public partial class CadastrarFilme : Window
     {
+        private int _id;
+
+        private Filmes _filmes;
         public CadastrarFilme()
         {
             InitializeComponent();
+            Loaded += CadastrarFilme_Loaded;
         }
+        public CadastrarFilme(int id)
+        {
+            _id = id;
+            InitializeComponent();
+            Loaded += CadastrarFilme_Loaded;
+        }
+
+        private void CadastrarFilme_Loaded(object sender, RoutedEventArgs e)
+        {
+            _filmes = new Filmes();
+
+            LoadComboBox();
+
+            if (_id > 0)
+                FillForm();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _filmes.Nome = txtNome.Text;
+            _filmes.CPF = txtCPF.Text;
+            _filmes.RG = txtRG.Text;
+            _filmes.Email = txtEmail.Text;
+            _filmes.Celular = txtCelular.Text;
+            _filmes.Funcao = txtFuncao.Text;
+
+            if (double.TryParse(txtSalario.Text, out double salario))
+                _filmes.Salario = salario;
+
+            if (dtPickerDataNascimento.SelectedDate != null)
+                _filmes.DataNascimento = (DateTime)dtPickerDataNascimento.SelectedDate;
+
+            if (comboBoxSexo.SelectedItem != null)
+                _filmes.Sexo = comboBoxSexo.SelectedItem as Sexo;
+
+            _filmes.Endereco = new Endereco();
+            _filmes.Endereco.Rua = txtRua.Text;
+            _filmes.Endereco.Bairro = txtBairro.Text;
+            _filmes.Endereco.Cidade = txtCidade.Text;
+
+            if (int.TryParse(txtNumero.Text, out int numero))
+                _filmes.Endereco.Numero = numero;
+
+            if (comboBoxEstado.SelectedItem != null)
+                _filmes.Endereco.Estado = comboBoxEstado.SelectedItem as string;
+
+            SaveData();
+        }
+        private bool Validate()
+        {
+            var validator = new FuncionarioValitador();
+            var result = validator.Validate(_filmes);
+
+            if (!result.IsValid)
+            {
+                string errors = null;
+                var count = 1;
+
+                foreach (var failure in result.Errors)
+                {
+                    errors += $"{count++} - {failure.ErrorMessage}\n";
+                }
+
+                MessageBox.Show(errors, "Validação de Dados", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            return result.IsValid;
+        }
+
+        private void SaveData()
+        {
+            try
+            {
+                if (Validate())
+                {
+                    var dao = new FuncionarioDAO();
+                    var text = "atualizado";
+
+                    if (_filmes.Id == 0)
+                    {
+                        dao.Insert(_filmes);
+                        text = "adicionado";
+                    }
+                    else
+                        dao.Update(_filmes);
+
+                    MessageBox.Show($"O Funcionário foi {text} com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    CloseFormVerify();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não Executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void FillForm()
+        {
+            try
+            {
+                var dao = new FuncionarioDAO();
+                _filmes = dao.GetById(_id);
+
+                txtId.Text = _filmes.Id.ToString();
+                txtNome.Text = _filmes.Nome;
+                txtCPF.Text = _filmes.CPF;
+                txtRG.Text = _filmes.RG;
+                dtPickerDataNascimento.SelectedDate = _filmes.DataNascimento;
+                txtEmail.Text = _filmes.Email;
+                txtCelular.Text = _filmes.Celular;
+                txtFuncao.Text = _filmes.Funcao;
+                txtSalario.Text = _filmes.Salario.ToString();
+
+                if (_filmes.Sexo != null)
+                    comboBoxSexo.SelectedValue = _filmes.Sexo.Id;
+
+                if (_filmes.Endereco != null)
+                {
+                    txtRua.Text = _filmes.Endereco.Rua;
+                    txtNumero.Text = _filmes.Endereco.Numero.ToString();
+                    txtBairro.Text = _filmes.Endereco.Bairro;
+                    txtCidade.Text = _filmes.Endereco.Cidade;
+
+                    comboBoxEstado.SelectedValue = _filmes.Endereco.Estado;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void CloseFormVerify()
+        {
+            if (_filmes.Id == 0)
+            {
+                var result = MessageBox.Show("Deseja continuar adicionando funcionários?", "Continuar?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.No)
+                    this.Close();
+                else
+                    ClearInputs();
+            }
+            else
+                this.Close();
+        }
+
+        private void LoadComboBox()
+        {
+            try
+            {
+                comboBoxEstado.ItemsSource = Estado.List();
+                comboBoxSexo.ItemsSource = new SexoDAO().List();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void ClearInputs()
+        {
+            txtNome.Text = "";
+            txtCPF.Text = "";
+            txtRG.Text = "";
+            dtPickerDataNascimento.SelectedDate = null;
+            txtEmail.Text = "";
+            txtCelular.Text = "";
+            txtFuncao.Text = "";
+            txtSalario.Text = "";
+        }
+
     }
 }

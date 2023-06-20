@@ -198,7 +198,7 @@ namespace ProjetoDePDS3_A.Views
             try
             {
                 txtEstado.ItemsSource = Estado.List();
-                comboBoxSexo.ItemsSource = new SexoDAO().List();
+                //comboBoxSexo.ItemsSource = new SexoDAO().List();
             }
             catch (Exception ex)
             {
@@ -209,13 +209,14 @@ namespace ProjetoDePDS3_A.Views
         private void ClearInputs()
         {
             txtNome.Text = "";
-            txtCPF.Text = "";
-            txtRG.Text = "";
+            txtCpf.Text = "";
+            TxtRG.Text = "";
             dtPickerDataNascimento.SelectedDate = null;
             txtEmail.Text = "";
-            txtCelular.Text = "";
-            txtFuncao.Text = "";
-            txtSalario.Text = "";
+            txtTelefone.Text = "";
+            txtEmail.Text = "";
+            txtCep.Text = "";
+
         }
 
         

@@ -27,7 +27,7 @@ namespace ProjetoDePDS3_A.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CadastrarCliente form = new CadastrarCliente();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

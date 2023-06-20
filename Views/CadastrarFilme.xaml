@@ -37,7 +37,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Salvar" HorizontalAlignment="Left" Margin="569,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="#FF90DD7E"/>
+        <Button Content="Salvar" HorizontalAlignment="Left" Margin="569,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="#FF90DD7E" Click="Button_Click"/>
         <Button Content="Outras Opeções" HorizontalAlignment="Left" Margin="564,363,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Margin="43,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
         <TextBox HorizontalAlignment="Left" Margin="43,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoDePDS3_A.Models
 {
-    internal class Filmes
+    internal class Estoque
     {
         public int Id { get; set; }
 

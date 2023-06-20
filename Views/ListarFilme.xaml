@@ -15,29 +15,29 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="FuncionarioListWindow" Height="800" Width="1100" WindowStartupLocation="CenterScreen">
 
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="0"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True">
+        <!--<Menu IsMainMenu="True">
             <MenuItem Header="_Arquivo">
                 <MenuItem Header="_Novo" Icon="{materialDesign:PackIcon Kind=ContentSave}" Click="MenuItem_Novo_Click"/>
                 <MenuItem  Header="Save As.." />
                 <MenuItem Header="Sair" InputGestureText="Ctrl+E" Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
             </MenuItem>
-        </Menu>
+        </Menu>-->
 
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Funcionários"
-                  Background="BurlyWood"
+            <TextBlock Text="Filmes"
+                  Background="Red"
                   Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                   Padding="10"/>
         </StackPanel>
 
         <DataGrid Grid.Row="2" Margin="5,5,5,5" x:Name="dataGrid" IsReadOnly="true"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" Grid.ColumnSpan="2">
+                      AutoGenerateColumns="False" RowBackground="Black" AlternationCount="2" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Nome do Funcionário" Binding="{Binding Nome}"/>

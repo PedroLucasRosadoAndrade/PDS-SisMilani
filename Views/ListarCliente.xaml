@@ -17,36 +17,38 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="0"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True">
+        <!--<Menu IsMainMenu="True">
             <MenuItem Header="_Arquivo">
                 <MenuItem Header="_Novo" Icon="{materialDesign:PackIcon Kind=ContentSave}" Click="MenuItem_Novo_Click"/>
                 <MenuItem  Header="Save As.." />
                 <MenuItem Header="Sair" InputGestureText="Ctrl+E" Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
             </MenuItem>
-        </Menu>
+        </Menu>-->
 
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Funcionários"
-                  Background="BurlyWood"
+            <TextBlock Text="Clientes"
+                  Background="Red"
                   Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                   Padding="10"/>
         </StackPanel>
 
             <DataGrid Grid.Row="2" Margin="5,5,5,5" x:Name="dataGrid" IsReadOnly="true"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" Grid.ColumnSpan="2">
+                      AutoGenerateColumns="False" AlternatingRowBackground="Black" AlternationCount="2" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Header="Nome do Funcionário" Binding="{Binding Nome}"/>
-                    <DataGridTextColumn Header="Sexo" Binding="{Binding Sexo.Nome}"/>
-                    <DataGridTextColumn Header="CPF" Binding="{Binding CPF}"/>
+                    <DataGridTextColumn Header="Nome do Cliente" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Header="RG do Cliente" Binding="{Binding RG}"/>
+                    <DataGridTextColumn Header="UF" Binding="{Binding UF}"/>
+                    <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}"/>
                     <DataGridTextColumn Header="E-mail" Binding="{Binding Email}"/>
-                    <DataGridTextColumn Header="Celular" Binding="{Binding Celular}"/>
-                    <DataGridTextColumn Header="Função" Binding="{Binding Funcao}"/>
-                    <DataGridTextColumn Header="Salário" Binding="{Binding Salario, ConverterCulture='pt-BR', StringFormat=C}"/>
+                    <DataGridTextColumn Header="CEP" Binding="{Binding CEP}"/>
+                    <DataGridTextColumn Header="CPF" Binding="{Binding CPF}"/>
+                    <DataGridTextColumn Header="Rua" Binding="{Binding Rua}"/>
+                    <DataGridTextColumn Header="Semha" Binding="{Binding Senha}"/>
 
                     <DataGridTemplateColumn Header="Ações">
                         <DataGridTemplateColumn.CellTemplate>
