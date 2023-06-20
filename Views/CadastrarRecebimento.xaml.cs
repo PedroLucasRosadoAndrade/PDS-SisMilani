@@ -23,5 +23,10 @@ namespace ProjetoDePDS3_A.Views
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -61,7 +61,7 @@
 
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="2">
                 <Label Content="Nome" FontSize="16" FontWeight="Bold" Foreground="#FFFAF7F7"></Label>
-                <TextBox FontSize="16" Text="" Width="205"/>
+                <TextBox FontSize="16" Text="" Width="205" TextChanged="TextBox_TextChanged"/>
 
                 <Label Content="Sobre Nome" FontSize="16" FontWeight="Bold" Foreground="#FFFAF5F5"></Label>
                 <TextBox FontSize="16" Text="" Width="200"/>

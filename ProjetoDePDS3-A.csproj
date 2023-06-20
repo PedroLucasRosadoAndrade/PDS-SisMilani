@@ -113,9 +113,13 @@
     <Compile Include="Helpers\Estado.cs" />
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Interfaces\IDAO.cs" />
+    <Compile Include="Models\ClienteValitator.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
+    <Compile Include="Models\Filmes.cs" />
+    <Compile Include="Models\FilmesDAO.cs" />
     <Compile Include="Models\FuncionarioValitator.cs" />
+    <Compile Include="Models\ProdutoValitator.cs" />
     <Compile Include="Models\Sexo.cs" />
     <Compile Include="Models\SexoDAO.cs" />
     <Compile Include="Views\CadastrarCliente.xaml.cs">

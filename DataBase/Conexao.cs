@@ -18,7 +18,7 @@ namespace ProjetoDePDS3_A.DataBase
 
         private static string password = "root";
 
-        private static string dbname = "bd_SisMilani";
+        private static string dbname = "bd_Sismilani";
 
         private static MySqlConnection connection;
 
