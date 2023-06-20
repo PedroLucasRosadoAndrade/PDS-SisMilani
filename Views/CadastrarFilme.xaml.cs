@@ -50,37 +50,26 @@ namespace ProjetoDePDS3_A.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _filmes.Nome = txtNome.Text;
-            _filmes.CPF = txtCPF.Text;
-            _filmes.RG = txtRG.Text;
-            _filmes.Email = txtEmail.Text;
-            _filmes.Celular = txtCelular.Text;
-            _filmes.Funcao = txtFuncao.Text;
+            _filmes.Descricao = txtDescricao.Text;
+            _filmes.Valor = txtValor.Text;
+            _filmes.Codigo = txtCodigo.Text;
+            _filmes.Fornecedor = txtFornecedor.Text;
+            _filmes.Unidade = txtUnidade.Text;
 
-            if (double.TryParse(txtSalario.Text, out double salario))
-                _filmes.Salario = salario;
+            
 
-            if (dtPickerDataNascimento.SelectedDate != null)
-                _filmes.DataNascimento = (DateTime)dtPickerDataNascimento.SelectedDate;
+            if (dtPickerDataFilme.SelectedDate != null)
+                _filmes.DataFilme = (DateTime)dtPickerDataFilme.SelectedDate;
 
-            if (comboBoxSexo.SelectedItem != null)
-                _filmes.Sexo = comboBoxSexo.SelectedItem as Sexo;
+           
 
-            _filmes.Endereco = new Endereco();
-            _filmes.Endereco.Rua = txtRua.Text;
-            _filmes.Endereco.Bairro = txtBairro.Text;
-            _filmes.Endereco.Cidade = txtCidade.Text;
-
-            if (int.TryParse(txtNumero.Text, out int numero))
-                _filmes.Endereco.Numero = numero;
-
-            if (comboBoxEstado.SelectedItem != null)
-                _filmes.Endereco.Estado = comboBoxEstado.SelectedItem as string;
+            
 
             SaveData();
         }
         private bool Validate()
         {
-            var validator = new FuncionarioValitador();
+            var validator = new FilmeValitator;
             var result = validator.Validate(_filmes);
 
             if (!result.IsValid)
@@ -203,5 +192,6 @@ namespace ProjetoDePDS3_A.Views
             txtSalario.Text = "";
         }
 
+       
     }
 }

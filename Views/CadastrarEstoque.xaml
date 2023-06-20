@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                   FontSize="16" FontWeight="Bold" Padding="10" Text="Cadastro de Estoque" Background="Red" Width="799"/>
+                   FontSize="16" FontWeight="Bold" Padding="10" Text="Cadastro de Estoque" Background="Red" Width="799" Foreground="White"/>
 
 
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="40" Orientation="Vertical">
