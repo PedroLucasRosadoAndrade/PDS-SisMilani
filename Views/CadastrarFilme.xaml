@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CadastrarFilme" Height="503" Width="800">
     <Grid Height="NaN" Margin="0,0,0,-16" Width="NaN" Background="Black">
-        <ComboBox HorizontalAlignment="Left" Margin="540,276,0,0" VerticalAlignment="Top" Width="227" RenderTransformOrigin="0.5,0.5" Height="35">
+        <ComboBox x:Name="txtUnidade" HorizontalAlignment="Left" Margin="540,276,0,0" VerticalAlignment="Top" Width="227" RenderTransformOrigin="0.5,0.5" Height="35">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -25,7 +25,7 @@
         <Label Content="Data" HorizontalAlignment="Left" Margin="540,71,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="White"/>
         <Label Content="Fornecedor" HorizontalAlignment="Left" Margin="540,159,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="#FF090000" Foreground="White"/>
         <Label Content="Unidade" HorizontalAlignment="Left" Margin="540,237,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="Black" BorderBrush="#FFFDFDFD" Foreground="White"/>
-        <DatePicker HorizontalAlignment="Left" Margin="540,105,0,0" VerticalAlignment="Top" Width="221" Height="23"/>
+        <DatePicker x:Name="dtPickerDataFilme" HorizontalAlignment="Left" Margin="540,105,0,0" VerticalAlignment="Top" Width="221" Height="23"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="82,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="White" Background="#FFC94F34"/>
         <Button Content="ADD" HorizontalAlignment="Center" Margin="0,428,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="Black" Background="White" RenderTransformOrigin="0.5,0.5" Width="98" Height="31" >
             <Button.RenderTransform>
@@ -39,11 +39,11 @@
         </Button>
         <Button Content="Salvar" HorizontalAlignment="Left" Margin="569,426,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Background="#FF90DD7E" Click="Button_Click"/>
         <Button Content="Outras Opeções" HorizontalAlignment="Left" Margin="564,363,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="43,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="43,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="43,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="43,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="540,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="43,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Margin="43,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Margin="43,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtDescricao" HorizontalAlignment="Left" Margin="43,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
+        <TextBox x:Name="txtFornecedor" HorizontalAlignment="Left" Margin="540,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Height="33"/>
 
     </Grid>
 </Window>

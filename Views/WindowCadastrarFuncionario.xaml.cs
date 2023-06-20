@@ -23,7 +23,7 @@ namespace ProjetoDePDS3_A.Views
     {
         private int _id;
 
-        private Funcionario _funcionario;
+        private Filme _funcionario;
 
         public WindowCadastrarFuncionario()
         {
@@ -46,7 +46,7 @@ namespace ProjetoDePDS3_A.Views
 
         private void WindowCadastrarFuncionario_Loaded(object sender, RoutedEventArgs e)
         {
-            _funcionario = new Funcionario();
+            _funcionario = new Filme();
 
             LoadComboBox();
 
